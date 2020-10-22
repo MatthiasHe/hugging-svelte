@@ -1,4 +1,12 @@
 <script>
+	import MdClose from 'svelte-icons/md/MdClose.svelte'
+	import MdMenu from 'svelte-icons/md/MdMenu.svelte'
+
+	let hidden = false;
+
+	function navActionClick() {
+		hidden = !hidden;
+	}
 </script>
 
 <main>
@@ -12,20 +20,21 @@
 			>
 
 			<div class="sm:hidden">
-				<button type="button" class="block focus:outline-none">
-					<svg class="h-6 w-6 fill-current" viewBox="0 0 24 24" color="black">
-						<!--                        <ng-template><path fill-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/></ng-template>-->
-						<!--                        <ng-template><path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/></ng-template>-->
-					</svg>
+				<button on:click={navActionClick} type="button" class="block border-none focus:outline-none w-8">
+					{#if hidden}
+						<MdMenu />
+					{:else}
+						<MdClose />
+					{/if}
 				</button>
 			</div>
 		</div>
 
-<!--		<nav class="px-2 pt-2 pb-4 sm:flex sm:p-0">-->
-<!--			<a class="block mt-4 lg:inline-block lg:mt-0 hover:text-purple-300 mr-4 cursor-pointer">Models</a>-->
-<!--			<a class="block mt-4 lg:inline-block lg:mt-0 hover:text-purple-300 mr-4 cursor-pointer">Pricing</a>-->
-<!--			<a class="block mt-4 lg:inline-block lg:mt-0 underline hover:text-purple-300 cursor-pointer">Account</a>-->
-<!--		</nav>-->
+		<nav class="px-2 pt-2 pb-4 sm:flex sm:p-0">
+			<a class="block mt-4 lg:inline-block lg:mt-0 hover:text-purple-800 mr-4 cursor-pointer">Models</a>
+			<a class="block mt-4 lg:inline-block lg:mt-0 hover:text-purple-800 mr-4 cursor-pointer">Pricing</a>
+			<a class="block mt-4 lg:inline-block lg:mt-0 underline hover:text-purple-800 cursor-pointer">Account</a>
+		</nav>
 	</header>
 </main>
 
