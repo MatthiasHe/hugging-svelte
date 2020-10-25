@@ -3,7 +3,7 @@
 	const src = 'https://aeiljuispo.cloudimg.io/v7/https://s3.amazonaws.com/moonup/production/uploads/1583856921041-5dd96eb166059660ed1ee413.png?w=200&h=200&f=face';
 </script>
 
-<div class="py-2 px-4 flex flex-col items-center bg-gray-100 sm:py-12 sm:px-16 sm:flex-row">
+<div class="py-2 px-4 flex flex-col items-center bg-gray-100 sm:py-12 sm:px-32 sm:flex-row">
 	<img class="h-24 rounded" {src}/>
 
 	<div class="pl-8 text-center sm:text-left">
@@ -14,7 +14,6 @@
 			<a {href}>{href}</a>
 		</div>
 	</div>
-
 </div>
 
 <style>

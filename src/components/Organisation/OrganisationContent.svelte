@@ -5,7 +5,7 @@
 	import OrganisationModel from './OrganisationModel.svelte'
 </script>
 
-<div class="flex py-2 px-4 sm:py-12 sm:px-16">
+<div class="flex py-2 px-4 sm:py-12 sm:px-32">
 	<div class="w-1/4">
 		<div class="mb-8">
 			<div class="font-bold mb-3">
@@ -21,7 +21,7 @@
 				Team members
 			</div>
 
-				<div class="grid grid-cols-5 gap-4 pr-12">
+				<div class="grid grid-cols-5 gap-2 pr-12">
 				{#each Array(10) as avatar}
 					<img
 						class="overflow-hidden inline-block rounded-full cursor-pointer hover:shadow-lg"
