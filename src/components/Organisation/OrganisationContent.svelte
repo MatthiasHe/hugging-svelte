@@ -6,7 +6,7 @@
 </script>
 
 <div class="flex py-2 px-4 sm:py-12 sm:px-16">
-	<div class="w-1/3">
+	<div class="w-1/4">
 		<div class="mb-8">
 			<div class="font-bold mb-3">
 				<span class="w-3 inline-block mr-1"><FaMicroscope/></span>
@@ -33,13 +33,13 @@
 		</div>
 	</div>
 
-	<div class="w-2/3">
+	<div class="w-3/4">
 		<div class="font-bold mb-3">
 			<span class="w-3 inline-block mr-1"><FaCube /></span>
 			Models
 		</div>
 
-		<div class="grid grid-cols-2 gap-4">
+		<div class="grid grid-cols-3 gap-10">
 			{#each Array(8) as model}
 				<OrganisationModel />
 			{/each}
